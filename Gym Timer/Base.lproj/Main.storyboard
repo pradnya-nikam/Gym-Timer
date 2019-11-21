@@ -16,8 +16,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gym Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG4-Gf-kxd">
-                                <rect key="frame" x="136" y="64" width="142" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="135" y="64" width="144" height="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -28,79 +28,93 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ3-Tg-nj7">
-                                <rect key="frame" x="165.5" y="503" width="83" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="184" y="503" width="46.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiC-vT-4G8">
-                                <rect key="frame" x="106" y="763" width="47" height="30"/>
-                                <state key="normal" title="START"/>
+                                <rect key="frame" x="50" y="693" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.63529411764705879" green="0.87450980392156863" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oiC-vT-4G8" secondAttribute="height" multiplier="1:1" id="20D-Xc-grx"/>
+                                    <constraint firstAttribute="width" constant="100" id="upf-MQ-hh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYR-3w-hNe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jz-Gn-Nk8">
-                                <rect key="frame" x="269" y="763" width="39" height="30"/>
-                                <state key="normal" title="STOP"/>
+                                <rect key="frame" x="264" y="693" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.84705882352941175" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="stopTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dal-6n-o2b"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V47-w0-uqB">
-                                <rect key="frame" x="50" y="235.5" width="80" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V47-w0-uqB">
+                                <rect key="frame" x="50" y="238" width="82.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-T7-XkJ">
-                                <rect key="frame" x="50" y="200" width="53.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="50" y="202" width="56" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-WD-gcF">
-                                <rect key="frame" x="138" y="200" width="108" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="140.5" y="202" width="103" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-aN-fJd">
-                                <rect key="frame" x="138" y="235.5" width="105" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="140.5" y="238" width="101.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbu-j2-g0p">
-                                <rect key="frame" x="303" y="200" width="62" height="30"/>
-                                <state key="normal" title="CHANGE"/>
-                                <connections>
-                                    <action selector="changeIntervalsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h14-uw-nAD"/>
-                                    <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKU-tJ-n7f"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oG4-Gf-kxd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="01h-Tg-eK6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jbu-j2-g0p" secondAttribute="trailing" constant="49" id="4on-2Q-wff"/>
                             <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="Q1k-WD-gcF" secondAttribute="leading" id="7mi-kW-vHZ"/>
                             <constraint firstItem="QFA-1q-Utt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8oQ-OC-jMD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oiC-vT-4G8" secondAttribute="bottom" constant="69" id="Bsc-1t-fRV"/>
+                            <constraint firstItem="1Jz-Gn-Nk8" firstAttribute="width" secondItem="oiC-vT-4G8" secondAttribute="width" id="Bte-7n-OS0"/>
                             <constraint firstItem="V47-w0-uqB" firstAttribute="top" secondItem="ySC-T7-XkJ" secondAttribute="bottom" constant="10" id="DEa-V4-vH3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nlu-aN-fJd" secondAttribute="trailing" symbolic="YES" id="Dvl-1e-PtY"/>
-                            <constraint firstItem="oiC-vT-4G8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="EPB-HF-NtY"/>
+                            <constraint firstItem="oiC-vT-4G8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="EPB-HF-NtY"/>
                             <constraint firstItem="nlu-aN-fJd" firstAttribute="centerY" secondItem="V47-w0-uqB" secondAttribute="centerY" id="FlI-gL-iVd"/>
                             <constraint firstItem="Q1k-WD-gcF" firstAttribute="centerY" secondItem="ySC-T7-XkJ" secondAttribute="centerY" id="HjE-3L-6jd"/>
-                            <constraint firstItem="jbu-j2-g0p" firstAttribute="top" secondItem="ySC-T7-XkJ" secondAttribute="top" id="KId-HW-pNY"/>
                             <constraint firstItem="LJ3-Tg-nj7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LK2-fq-QYx"/>
-                            <constraint firstItem="1Jz-Gn-Nk8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oiC-vT-4G8" secondAttribute="trailing" constant="8" symbolic="YES" id="PFI-3b-CpI"/>
                             <constraint firstItem="QFA-1q-Utt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PWE-nk-aEb"/>
                             <constraint firstItem="oG4-Gf-kxd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TYW-Na-vDx"/>
                             <constraint firstItem="V47-w0-uqB" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="leading" id="USk-7R-X8X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Jz-Gn-Nk8" secondAttribute="bottom" constant="69" id="UqB-JF-vRH"/>
-                            <constraint firstItem="jbu-j2-g0p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q1k-WD-gcF" secondAttribute="trailing" constant="8" symbolic="YES" id="bd3-Fl-ScS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Jz-Gn-Nk8" secondAttribute="trailing" constant="106" id="e5c-wg-XHx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Jz-Gn-Nk8" secondAttribute="trailing" constant="50" id="e5c-wg-XHx"/>
+                            <constraint firstItem="1Jz-Gn-Nk8" firstAttribute="height" secondItem="oiC-vT-4G8" secondAttribute="height" id="jyO-mZ-hul"/>
                             <constraint firstItem="ySC-T7-XkJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pnd-hV-XlY"/>
                             <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="V47-w0-uqB" secondAttribute="trailing" constant="8" symbolic="YES" id="uGq-nU-A7D"/>
                             <constraint firstItem="Q1k-WD-gcF" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="trailing" constant="34.5" id="xbI-En-caq"/>
