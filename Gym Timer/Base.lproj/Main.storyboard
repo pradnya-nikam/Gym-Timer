@@ -137,6 +137,7 @@
                     </view>
                     <connections>
                         <outlet property="restIntervalLabel" destination="nlu-aN-fJd" id="D2W-U7-wk5"/>
+                        <outlet property="startOrPauseButton" destination="oiC-vT-4G8" id="qAK-Ui-Cfu"/>
                         <outlet property="statusLabel" destination="LJ3-Tg-nj7" id="a4I-26-xlE"/>
                         <outlet property="timerLabel" destination="QFA-1q-Utt" id="zxf-uy-lOV"/>
                         <outlet property="workIntervalLabel" destination="Q1k-WD-gcF" id="MSj-WG-YMU"/>

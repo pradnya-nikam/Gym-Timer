@@ -27,30 +27,46 @@ class ViewController: UIViewController {
   //Flags
   
   var isWorkInterval = true
-  var isStarted = true
+  var isStarted = false {
+    didSet {
+      DispatchQueue.main.async {
+        let title = self.isStarted ? "PAUSE" : "START"
+        self.startOrPauseButton.setTitle(title, for: .normal)
+      }
+    }
+  }
   
   //Outlets
   @IBOutlet weak private var timerLabel: UILabel!
   @IBOutlet weak private var statusLabel: UILabel!
   @IBOutlet weak private var workIntervalLabel: UILabel!
   @IBOutlet weak private var restIntervalLabel: UILabel!
+  @IBOutlet weak var startOrPauseButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
     resetValues()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+//    resetValues()
   }
 
   private func resetValues() {
     workIntervalLabel.text = "\(workIntervalInSeconds) seconds"
     restIntervalLabel.text = "\(restIntervalInSeconds) seconds"
+    timerLabel.text = "\(workIntervalInSeconds)"
+    statusLabel.text = "Not started"
     isWorkInterval = true
-    
+    isStarted = false
   }
   
-  private func runTimer() {
+  //MARK: Timer Stuff
+  private func startTimer() {
     statusLabel.text = isWorkInterval ? "Working" : "Resting"
     timer = Timer.scheduledTimer(timeInterval: 1 , target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+    isStarted = true
   }
   
   @objc private func updateTimer() {
@@ -73,13 +89,18 @@ class ViewController: UIViewController {
     isWorkInterval = !isWorkInterval
     workIntervalCounter = workIntervalInSeconds + 1
     restIntervalCounter = restIntervalInSeconds + 1
-    runTimer()
+    startTimer()
   }
-  
   
   //MARK: Button actions
   @IBAction func startTimerAction(_ sender: Any) {
-    runTimer()
+    if !isStarted {
+      startTimer()
+      
+    } else {
+      timer.invalidate()
+      isStarted = false
+    }
   }
   @IBAction func stopTimerAction(_ sender: Any) {
     timer.invalidate()
