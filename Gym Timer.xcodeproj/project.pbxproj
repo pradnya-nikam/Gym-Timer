@@ -14,6 +14,7 @@
 		4C4E413A238126290049A662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4E4139238126290049A662 /* Assets.xcassets */; };
 		4C4E413D238126290049A662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4E413B238126290049A662 /* LaunchScreen.storyboard */; };
 		4C4E4148238126290049A662 /* Gym_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4147238126290049A662 /* Gym_TimerTests.swift */; };
+		4CCB1D36238685110007FD27 /* IntervalPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB1D35238685110007FD27 /* IntervalPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4C4E4143238126290049A662 /* Gym TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gym TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4E4147238126290049A662 /* Gym_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym_TimerTests.swift; sourceTree = "<group>"; };
 		4C4E4149238126290049A662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCB1D35238685110007FD27 /* IntervalPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				4C4E4139238126290049A662 /* Assets.xcassets */,
 				4C4E413B238126290049A662 /* LaunchScreen.storyboard */,
 				4C4E413E238126290049A662 /* Info.plist */,
+				4CCB1D35238685110007FD27 /* IntervalPickerViewController.swift */,
 			);
 			path = "Gym Timer";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				TargetAttributes = {
 					4C4E412C238126270049A662 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					4C4E4142238126290049A662 = {
 						CreatedOnToolsVersion = 11.0;
@@ -202,6 +206,7 @@
 			files = (
 				4C4E4135238126270049A662 /* ViewController.swift in Sources */,
 				4C4E4131238126270049A662 /* AppDelegate.swift in Sources */,
+				4CCB1D36238685110007FD27 /* IntervalPickerViewController.swift in Sources */,
 				4C4E4133238126270049A662 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CA9334YT24;
 				INFOPLIST_FILE = "Gym Timer/Info.plist";
@@ -371,6 +377,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "prad.Gym-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CA9334YT24;
 				INFOPLIST_FILE = "Gym Timer/Info.plist";
