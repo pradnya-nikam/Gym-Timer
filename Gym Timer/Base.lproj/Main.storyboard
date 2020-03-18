@@ -100,9 +100,6 @@
                                 <state key="normal" title="Change"/>
                                 <connections>
                                     <action selector="changeIntervalsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBH-B9-N5E"/>
-                                    <segue destination="dLB-So-2sz" kind="popoverPresentation" popoverAnchorView="JSz-8v-3ut" id="cgx-ac-RiS">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,9 +147,9 @@
         <!--Interval Picker View Controller-->
         <scene sceneID="uQc-qQ-0ku">
             <objects>
-                <viewController id="dLB-So-2sz" customClass="IntervalPickerViewController" customModule="Gym_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntervalPickerViewController" id="dLB-So-2sz" customClass="IntervalPickerViewController" customModule="Gym_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9nL-e3-zF6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PqC-qa-Ofj">
@@ -163,6 +160,9 @@
                                 <rect key="frame" x="353" y="20" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onDoneButtonTap:" destination="dLB-So-2sz" eventType="touchUpInside" id="I0X-2u-iND"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

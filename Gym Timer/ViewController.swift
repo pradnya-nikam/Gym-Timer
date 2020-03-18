@@ -12,7 +12,7 @@ import UIKit
 let DEFAULT_WORK_INTERVAL = 45
 let DEFAULT_REST_INTERVAL = 15
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, IntervalChangeDelegate {
 
   var timer = Timer()
 
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    resetValues()
+//    resetValues()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -108,7 +108,18 @@ class ViewController: UIViewController {
   }
   
   @IBAction func changeIntervalsAction(_ sender: Any) {
+    if let pickerVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "IntervalPickerViewController") as? IntervalPickerViewController {
+      pickerVC.intervalChangeDelegate = self
+      pickerVC.currentWorkInterval = workIntervalInSeconds
+      self.present(pickerVC, animated: true, completion: nil)
+    }
     
+  }
+  
+  //Mark: IntervalChange delegate
+  func intervalChanged(min: Int, sec: Int) {
+    workIntervalInSeconds = min * 60 + sec
+    resetValues()
   }
 }
 
