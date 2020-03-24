@@ -60,6 +60,8 @@ class ViewController: UIViewController, IntervalChangeDelegate {
     statusLabel.text = "Not started"
     isWorkInterval = true
     isStarted = false
+    workIntervalCounter = workIntervalInSeconds
+    restIntervalCounter = restIntervalInSeconds
   }
   
   //MARK: Timer Stuff
@@ -116,7 +118,7 @@ class ViewController: UIViewController, IntervalChangeDelegate {
     
   }
   
-  //Mark: IntervalChange delegate
+  //MARK: IntervalChange delegate methods
   func intervalChanged(min: Int, sec: Int) {
     workIntervalInSeconds = min * 60 + sec
     resetValues()

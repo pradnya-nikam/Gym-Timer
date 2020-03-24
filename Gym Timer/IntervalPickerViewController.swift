@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 class IntervalPickerViewController: ViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+  //Outlets
   @IBOutlet weak var workIntervalPicker: UIPickerView!
-  
+
+  //Vars
   var pickerData = [[Int]]()
   weak var intervalChangeDelegate: IntervalChangeDelegate?
   var currentWorkInterval = DEFAULT_WORK_INTERVAL
