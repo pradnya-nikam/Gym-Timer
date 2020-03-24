@@ -67,7 +67,7 @@ class ViewController: UIViewController {
   //MARK: Timer Stuff
   private func startTimer() {
     statusLabel.text = isWorkInterval ? "Working" : "Resting"
-    timer = Timer.scheduledTimer(timeInterval: 1 , target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     isStarted = true
   }
   
