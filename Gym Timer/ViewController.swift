@@ -110,12 +110,32 @@ class ViewController: UIViewController, IntervalChangeDelegate {
   }
   
   @IBAction func changeIntervalsAction(_ sender: Any) {
+      openPickerInAlertView(title: "Work Interval")
+  }
+  var pickerDatasourceDelegate: PickerDatasourceDelegate?
+  
+  func openPickerInAlertView(title: String) {
+    let alert = UIAlertController(title: title, message: "\n\n\n", preferredStyle: .actionSheet)
+     let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
+     alert.view.addSubview(picker)
+    let pickerDatasourceDelegate = PickerDatasourceDelegate(picker: picker)
+    pickerDatasourceDelegate.loadData()
+    
+//    pickerDatasourceDelegate?.intervalChangeDelegate = self
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self](action)  in
+      print("You selected \(pickerDatasourceDelegate.selectedMinute), \(pickerDatasourceDelegate.selectedSecond)")
+      self?.intervalChanged(min: pickerDatasourceDelegate.selectedMinute, sec: pickerDatasourceDelegate.selectedSecond)
+    }))
+    self.pickerDatasourceDelegate = pickerDatasourceDelegate
+    self.present(alert ,animated: true, completion: nil )
+  }
+  
+  func openPickerVC() {
     if let pickerVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "IntervalPickerViewController") as? IntervalPickerViewController {
       pickerVC.intervalChangeDelegate = self
       pickerVC.currentWorkInterval = workIntervalInSeconds
       self.present(pickerVC, animated: true, completion: nil)
     }
-    
   }
   
   //MARK: IntervalChange delegate methods
