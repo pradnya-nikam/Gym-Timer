@@ -10,14 +10,13 @@ import UIKit
 class PickerDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
   let workIntervalPicker: UIPickerView
   var pickerData = [[Int]]()
-  weak var intervalChangeDelegate: IntervalChangeDelegate?
-  var currentWorkInterval = DEFAULT_WORK_INTERVAL
+  let currentIntervalValue: Int
   var selectedMinute = 0
-  var selectedSecond = DEFAULT_WORK_INTERVAL
+  var selectedSecond = 0
   
-  init(picker: UIPickerView) {
+  init(picker: UIPickerView, currentIntervalValue: Int) {
     self.workIntervalPicker = picker
-    
+    self.currentIntervalValue = currentIntervalValue
   }
 
   func loadData() {
@@ -35,12 +34,12 @@ class PickerDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewData
   }
 
   func selectCurrentDataOnPicker() {
-    if currentWorkInterval > 60 {
-      selectedMinute = currentWorkInterval/60
-      selectedSecond = currentWorkInterval - selectedMinute*60
+    if currentIntervalValue > 60 {
+      selectedMinute = currentIntervalValue/60
+      selectedSecond = currentIntervalValue - selectedMinute*60
     } else {
       selectedMinute = 0
-      selectedSecond = currentWorkInterval
+      selectedSecond = currentIntervalValue
     }
     workIntervalPicker.selectRow(selectedMinute, inComponent: 0, animated: false)
     workIntervalPicker.selectRow(selectedSecond, inComponent: 1, animated: false)
@@ -73,11 +72,5 @@ class PickerDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewData
       selectedSecond = row
     }
   }
-  
-  func onDoneButtonTap(_ sender: Any) {
-    intervalChangeDelegate?.intervalChanged(min: selectedMinute, sec: selectedSecond)
-//    dismissSelf()
-  }
-  
   
 }

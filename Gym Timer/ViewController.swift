@@ -12,7 +12,7 @@ import UIKit
 let DEFAULT_WORK_INTERVAL = 45
 let DEFAULT_REST_INTERVAL = 15
 
-class ViewController: UIViewController, IntervalChangeDelegate {
+class ViewController: UIViewController {
 
   var timer = Timer()
 
@@ -116,26 +116,18 @@ class ViewController: UIViewController, IntervalChangeDelegate {
   
   func openPickerInAlertView(title: String) {
     let alert = UIAlertController(title: title, message: "\n\n\n", preferredStyle: .actionSheet)
-     let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 140))
+    //371x216
+     let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 216))
      alert.view.addSubview(picker)
-    let pickerDatasourceDelegate = PickerDatasourceDelegate(picker: picker)
+    let pickerDatasourceDelegate = PickerDatasourceDelegate(picker: picker, currentIntervalValue: workIntervalInSeconds)
     pickerDatasourceDelegate.loadData()
     
-//    pickerDatasourceDelegate?.intervalChangeDelegate = self
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self](action)  in
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (action)  in
       print("You selected \(pickerDatasourceDelegate.selectedMinute), \(pickerDatasourceDelegate.selectedSecond)")
       self?.intervalChanged(min: pickerDatasourceDelegate.selectedMinute, sec: pickerDatasourceDelegate.selectedSecond)
     }))
     self.pickerDatasourceDelegate = pickerDatasourceDelegate
     self.present(alert ,animated: true, completion: nil )
-  }
-  
-  func openPickerVC() {
-    if let pickerVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "IntervalPickerViewController") as? IntervalPickerViewController {
-      pickerVC.intervalChangeDelegate = self
-      pickerVC.currentWorkInterval = workIntervalInSeconds
-      self.present(pickerVC, animated: true, completion: nil)
-    }
   }
   
   //MARK: IntervalChange delegate methods
