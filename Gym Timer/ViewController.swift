@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 let DEFAULT_WORK_INTERVAL = 45
@@ -66,6 +67,7 @@ class ViewController: UIViewController {
   
   //MARK: Timer Stuff
   private func startTimer() {
+    informIntervalStartBySpeakingOut()
     statusLabel.text = isWorkInterval ? "Working" : "Resting"
     timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     isStarted = true
@@ -94,6 +96,21 @@ class ViewController: UIViewController {
     startTimer()
   }
   
+  //MARK: Speech stuff
+  
+  private func informIntervalStartBySpeakingOut() {
+    let speech = isWorkInterval ? "Starting work": "Starting rest"
+    speakOut(speech: speech)
+  }
+  
+  private func speakOut(speech: String) {
+    let utterance = AVSpeechUtterance(string: speech)
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+    utterance.rate = 0.3
+    
+    let synthesizer = AVSpeechSynthesizer()
+    synthesizer.speak(utterance)
+  }
   //MARK: Button actions
   @IBAction func startTimerAction(_ sender: Any) {
     if !isStarted {
@@ -109,6 +126,7 @@ class ViewController: UIViewController {
     resetValues()
   }
   
+  //MARK: Change Intervals
   @IBAction func changeRestIntervalAction(_ sender: Any) {
     openPickerInAlertView(title: "Rest Interval", type: .Rest)
   }
