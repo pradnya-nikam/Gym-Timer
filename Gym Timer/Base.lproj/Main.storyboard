@@ -33,81 +33,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiK-aE-0I9">
-                                <rect key="frame" x="77.5" y="436.5" width="259" height="67"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Work:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-T7-XkJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-aN-fJd">
-                                        <rect key="frame" x="156" y="38.5" width="101.5" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V47-w0-uqB">
-                                        <rect key="frame" x="0.0" y="36" width="148" height="31"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-WD-gcF">
-                                        <rect key="frame" x="156" y="0.0" width="103" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSz-8v-3ut">
-                                        <rect key="frame" x="87" y="0.0" width="61" height="35"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="Change"/>
-                                        <connections>
-                                            <action selector="changeIntervalsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBH-B9-N5E"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fr-Il-tuM">
+                                <rect key="frame" x="0.0" y="333" width="414" height="2"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="nlu-aN-fJd" firstAttribute="centerY" secondItem="V47-w0-uqB" secondAttribute="centerY" id="26b-SL-K2d"/>
-                                    <constraint firstAttribute="trailing" secondItem="Q1k-WD-gcF" secondAttribute="trailing" id="8ai-49-JCG"/>
-                                    <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="V47-w0-uqB" secondAttribute="trailing" constant="8" symbolic="YES" id="DPI-QY-oTk"/>
-                                    <constraint firstItem="V47-w0-uqB" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="leading" id="GGe-l1-kcN"/>
-                                    <constraint firstItem="JSz-8v-3ut" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="trailing" constant="31" id="Nwf-70-MIZ"/>
-                                    <constraint firstItem="Q1k-WD-gcF" firstAttribute="centerY" secondItem="ySC-T7-XkJ" secondAttribute="centerY" id="OQk-J1-6ek"/>
-                                    <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="Q1k-WD-gcF" secondAttribute="leading" id="XrS-YT-j2t"/>
-                                    <constraint firstItem="ySC-T7-XkJ" firstAttribute="top" secondItem="WiK-aE-0I9" secondAttribute="top" id="YSI-Tz-qdV"/>
-                                    <constraint firstAttribute="bottom" secondItem="V47-w0-uqB" secondAttribute="bottom" id="Z1V-Bw-K9x"/>
-                                    <constraint firstItem="JSz-8v-3ut" firstAttribute="top" secondItem="WiK-aE-0I9" secondAttribute="top" id="chx-BQ-jOJ"/>
-                                    <constraint firstItem="V47-w0-uqB" firstAttribute="top" secondItem="ySC-T7-XkJ" secondAttribute="bottom" constant="10" id="iba-bm-WKK"/>
-                                    <constraint firstItem="ySC-T7-XkJ" firstAttribute="leading" secondItem="WiK-aE-0I9" secondAttribute="leading" id="rRQ-qD-sju"/>
-                                    <constraint firstItem="Q1k-WD-gcF" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="trailing" constant="100" id="uRp-SW-5LH"/>
-                                    <constraint firstItem="JSz-8v-3ut" firstAttribute="top" secondItem="WiK-aE-0I9" secondAttribute="bottom" constant="-67" id="wEk-DU-iL9"/>
+                                    <constraint firstAttribute="height" constant="2" id="NrZ-hh-ckH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiC-vT-4G8">
-                                <rect key="frame" x="157" y="284" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.63529411764705879" green="0.87450980392156863" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="oiC-vT-4G8" secondAttribute="height" multiplier="1:1" id="20D-Xc-grx"/>
-                                    <constraint firstAttribute="width" constant="100" id="upf-MQ-hh8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYR-3w-hNe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jz-Gn-Nk8">
                                 <rect key="frame" x="314" y="315" width="50" height="38"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.84705882352941175" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,6 +57,88 @@
                                     <action selector="stopTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dal-6n-o2b"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiK-aE-0I9">
+                                <rect key="frame" x="77.5" y="454" width="259" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Work:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-T7-XkJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-aN-fJd">
+                                        <rect key="frame" x="156" y="36" width="101.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V47-w0-uqB">
+                                        <rect key="frame" x="0.0" y="36" width="148" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-WD-gcF">
+                                        <rect key="frame" x="156" y="0.0" width="103" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSz-8v-3ut">
+                                        <rect key="frame" x="87" y="-2.5" width="61" height="35"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Change"/>
+                                        <connections>
+                                            <action selector="changeWorkIntervalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyG-dE-OMy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="nlu-aN-fJd" firstAttribute="centerY" secondItem="V47-w0-uqB" secondAttribute="centerY" id="26b-SL-K2d"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q1k-WD-gcF" secondAttribute="trailing" id="8ai-49-JCG"/>
+                                    <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="V47-w0-uqB" secondAttribute="trailing" constant="8" symbolic="YES" id="DPI-QY-oTk"/>
+                                    <constraint firstItem="V47-w0-uqB" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="leading" id="GGe-l1-kcN"/>
+                                    <constraint firstItem="JSz-8v-3ut" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="trailing" constant="31" id="Nwf-70-MIZ"/>
+                                    <constraint firstItem="Q1k-WD-gcF" firstAttribute="centerY" secondItem="ySC-T7-XkJ" secondAttribute="centerY" id="OQk-J1-6ek"/>
+                                    <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="Q1k-WD-gcF" secondAttribute="leading" id="XrS-YT-j2t"/>
+                                    <constraint firstItem="ySC-T7-XkJ" firstAttribute="top" secondItem="WiK-aE-0I9" secondAttribute="top" id="YSI-Tz-qdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="V47-w0-uqB" secondAttribute="bottom" id="Z1V-Bw-K9x"/>
+                                    <constraint firstItem="V47-w0-uqB" firstAttribute="top" secondItem="ySC-T7-XkJ" secondAttribute="bottom" constant="10" id="iba-bm-WKK"/>
+                                    <constraint firstItem="JSz-8v-3ut" firstAttribute="firstBaseline" secondItem="ySC-T7-XkJ" secondAttribute="firstBaseline" id="prH-og-dLk"/>
+                                    <constraint firstItem="ySC-T7-XkJ" firstAttribute="leading" secondItem="WiK-aE-0I9" secondAttribute="leading" id="rRQ-qD-sju"/>
+                                    <constraint firstItem="Q1k-WD-gcF" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="trailing" constant="100" id="uRp-SW-5LH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiC-vT-4G8">
+                                <rect key="frame" x="157" y="284" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.63529411764705879" green="0.87450980392156863" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oiC-vT-4G8" secondAttribute="height" multiplier="1:1" id="20D-Xc-grx"/>
+                                    <constraint firstAttribute="width" constant="100" id="upf-MQ-hh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYR-3w-hNe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUA-h3-zBs">
+                                <rect key="frame" x="164.5" y="487.5" width="61" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="changeRestIntervalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Pl-a1-ulL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -133,11 +147,16 @@
                             <constraint firstItem="LJ3-Tg-nj7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LK2-fq-QYx"/>
                             <constraint firstItem="QFA-1q-Utt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PWE-nk-aEb"/>
                             <constraint firstItem="oG4-Gf-kxd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TYW-Na-vDx"/>
-                            <constraint firstItem="WiK-aE-0I9" firstAttribute="top" secondItem="oiC-vT-4G8" secondAttribute="bottom" constant="52.5" id="dF7-14-ehn"/>
+                            <constraint firstAttribute="trailing" secondItem="9Fr-Il-tuM" secondAttribute="trailing" id="W2d-JX-4zq"/>
+                            <constraint firstItem="WiK-aE-0I9" firstAttribute="top" secondItem="oiC-vT-4G8" secondAttribute="bottom" constant="70" id="dF7-14-ehn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Jz-Gn-Nk8" secondAttribute="trailing" constant="50" id="e5c-wg-XHx"/>
+                            <constraint firstItem="9Fr-Il-tuM" firstAttribute="centerY" secondItem="oiC-vT-4G8" secondAttribute="centerY" id="fdT-nF-0et"/>
+                            <constraint firstItem="9Fr-Il-tuM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jOA-H3-xyJ"/>
                             <constraint firstItem="WiK-aE-0I9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="laY-14-yCS"/>
+                            <constraint firstItem="QUA-h3-zBs" firstAttribute="leading" secondItem="JSz-8v-3ut" secondAttribute="leading" id="u3n-pF-8c0"/>
                             <constraint firstItem="oiC-vT-4G8" firstAttribute="top" secondItem="LJ3-Tg-nj7" secondAttribute="bottom" constant="47.5" id="wPx-jB-tNL"/>
                             <constraint firstItem="QFA-1q-Utt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="xpp-R8-DJ2"/>
+                            <constraint firstItem="QUA-h3-zBs" firstAttribute="firstBaseline" secondItem="V47-w0-uqB" secondAttribute="firstBaseline" id="yjH-rC-iM3"/>
                             <constraint firstItem="1Jz-Gn-Nk8" firstAttribute="centerY" secondItem="oiC-vT-4G8" secondAttribute="centerY" id="z6P-Ta-BFZ"/>
                             <constraint firstItem="LJ3-Tg-nj7" firstAttribute="top" secondItem="QFA-1q-Utt" secondAttribute="bottom" constant="30" id="zdD-WA-zbO"/>
                         </constraints>
@@ -153,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="109"/>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
         </scene>
     </scenes>
 </document>

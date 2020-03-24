@@ -109,30 +109,43 @@ class ViewController: UIViewController {
     resetValues()
   }
   
-  @IBAction func changeIntervalsAction(_ sender: Any) {
-      openPickerInAlertView(title: "Work Interval")
+  @IBAction func changeRestIntervalAction(_ sender: Any) {
+    openPickerInAlertView(title: "Rest Interval", type: .Rest)
   }
+  
+  @IBAction func changeWorkIntervalAction(_ sender: Any) {
+    openPickerInAlertView(title: "Work Interval", type: .Work)
+  }
+  
   var pickerDatasourceDelegate: PickerDatasourceDelegate?
   
-  func openPickerInAlertView(title: String) {
-    let alert = UIAlertController(title: title, message: "\n\n\n", preferredStyle: .actionSheet)
+  func openPickerInAlertView(title: String, type: IntervalType) {
+    let alert = UIAlertController(title: title, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
     //371x216
      let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 216))
      alert.view.addSubview(picker)
-    let pickerDatasourceDelegate = PickerDatasourceDelegate(picker: picker, currentIntervalValue: workIntervalInSeconds)
+    let currentIntervalValue = (type == .Work) ? workIntervalInSeconds : restIntervalCounter
+    let pickerDatasourceDelegate = PickerDatasourceDelegate(picker: picker, currentIntervalValue: currentIntervalValue)
     pickerDatasourceDelegate.loadData()
     
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (action)  in
-      print("You selected \(pickerDatasourceDelegate.selectedMinute), \(pickerDatasourceDelegate.selectedSecond)")
-      self?.intervalChanged(min: pickerDatasourceDelegate.selectedMinute, sec: pickerDatasourceDelegate.selectedSecond)
+      self?.intervalChanged(min: pickerDatasourceDelegate.selectedMinute,
+                            sec: pickerDatasourceDelegate.selectedSecond, type: type)
+      self?.pickerDatasourceDelegate = nil
     }))
     self.pickerDatasourceDelegate = pickerDatasourceDelegate
     self.present(alert ,animated: true, completion: nil )
   }
   
-  //MARK: IntervalChange delegate methods
-  func intervalChanged(min: Int, sec: Int) {
-    workIntervalInSeconds = min * 60 + sec
+  
+  func intervalChanged(min: Int, sec: Int, type: IntervalType) {
+    let valueInSeconds = min * 60 + sec
+    switch type {
+    case .Work:
+      workIntervalInSeconds = valueInSeconds
+    case .Rest:
+      restIntervalInSeconds = valueInSeconds
+    }
     resetValues()
   }
 }

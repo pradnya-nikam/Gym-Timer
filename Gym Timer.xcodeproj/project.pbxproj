@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C359F5B24299D27000A0C41 /* PickerDatasourseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C359F5A24299D27000A0C41 /* PickerDatasourseDelegate.swift */; };
+		4C359F5D2429EFF5000A0C41 /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C359F5C2429EFF5000A0C41 /* IntervalType.swift */; };
 		4C4E4131238126270049A662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4130238126270049A662 /* AppDelegate.swift */; };
 		4C4E4133238126270049A662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4132238126270049A662 /* SceneDelegate.swift */; };
 		4C4E4135238126270049A662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4134238126270049A662 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		4C359F5A24299D27000A0C41 /* PickerDatasourseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDatasourseDelegate.swift; sourceTree = "<group>"; };
+		4C359F5C2429EFF5000A0C41 /* IntervalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalType.swift; sourceTree = "<group>"; };
 		4C4E412D238126270049A662 /* Gym Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4E4130238126270049A662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4E4132238126270049A662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				4C4E413B238126290049A662 /* LaunchScreen.storyboard */,
 				4C4E413E238126290049A662 /* Info.plist */,
 				4C359F5A24299D27000A0C41 /* PickerDatasourseDelegate.swift */,
+				4C359F5C2429EFF5000A0C41 /* IntervalType.swift */,
 			);
 			path = "Gym Timer";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				4C359F5B24299D27000A0C41 /* PickerDatasourseDelegate.swift in Sources */,
 				4C4E4131238126270049A662 /* AppDelegate.swift in Sources */,
 				4C4E4133238126270049A662 /* SceneDelegate.swift in Sources */,
+				4C359F5D2429EFF5000A0C41 /* IntervalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
