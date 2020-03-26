@@ -13,7 +13,7 @@ import AVFoundation
 let DEFAULT_WORK_INTERVAL = 45
 let DEFAULT_REST_INTERVAL = 15
 
-class ViewController: UIViewController {
+class TimerViewController: UIViewController {
 
   var timer = Timer()
 
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
   private func startTimer() {
     informIntervalStartBySpeakingOut()
     statusLabel.text = isWorkInterval ? "Working" : "Resting"
-    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateTimer)), userInfo: nil, repeats: true)
     isStarted = true
   }
   
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
       restIntervalCounter -= 1
       seconds = restIntervalCounter
     }
-    if seconds < 2 {
+    if seconds < 1 {
       toggleTimer()
     }
     timerLabel.text = "\(seconds)"
