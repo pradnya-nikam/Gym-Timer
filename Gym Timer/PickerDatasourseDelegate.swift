@@ -7,25 +7,26 @@
 //
 
 import UIKit
-class PickerDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
-  let workIntervalPicker: UIPickerView
+class IntervalPickerDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+  let intervalPicker: UIPickerView
   var pickerData = [[Int]]()
   let currentIntervalValue: Int
   var selectedMinute = 0
   var selectedSecond = 0
-  
+  let maxIntervalValue = 60
   init(picker: UIPickerView, currentIntervalValue: Int) {
-    self.workIntervalPicker = picker
+    self.intervalPicker = picker
     self.currentIntervalValue = currentIntervalValue
   }
 
   func loadData() {
-    //Insert 2 arrays for minutes and seconds values
-    workIntervalPicker.dataSource = self
-    workIntervalPicker.delegate = self
 
+    intervalPicker.dataSource = self
+    intervalPicker.delegate = self
+
+    //Create 2 arrays for minutes and seconds values
     pickerData = [[Int](),[Int]()]
-    for i in 0..<60 {
+    for i in 0..<maxIntervalValue {
       pickerData[0].append(i)
       pickerData[1].append(i)
     }
@@ -34,15 +35,15 @@ class PickerDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewData
   }
 
   func selectCurrentDataOnPicker() {
-    if currentIntervalValue > 60 {
-      selectedMinute = currentIntervalValue/60
-      selectedSecond = currentIntervalValue - selectedMinute*60
+    if currentIntervalValue > maxIntervalValue {
+      selectedMinute = currentIntervalValue/maxIntervalValue
+      selectedSecond = currentIntervalValue - selectedMinute*maxIntervalValue
     } else {
       selectedMinute = 0
       selectedSecond = currentIntervalValue
     }
-    workIntervalPicker.selectRow(selectedMinute, inComponent: 0, animated: false)
-    workIntervalPicker.selectRow(selectedSecond, inComponent: 1, animated: false)
+    intervalPicker.selectRow(selectedMinute, inComponent: 0, animated: false)
+    intervalPicker.selectRow(selectedSecond, inComponent: 1, animated: false)
   }
 
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
