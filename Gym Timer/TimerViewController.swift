@@ -107,7 +107,7 @@ class TimerViewController: UIViewController {
   private func speakOut(speech: String) {
     let utterance = AVSpeechUtterance(string: speech)
     utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-    utterance.rate = 0.3
+    utterance.rate = 0.5
     
     let synthesizer = AVSpeechSynthesizer()
     synthesizer.speak(utterance)
@@ -136,7 +136,7 @@ class TimerViewController: UIViewController {
     openPickerInAlertView(title: "Work Interval", type: .Work)
   }
   
-  var pickerDatasourceDelegate: PickerDatasourceDelegate?
+  var pickerDatasourceDelegate: IntervalPickerDatasourceDelegate?
   
   func openPickerInAlertView(title: String, type: IntervalType) {
     let alert = UIAlertController(title: title, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
@@ -144,7 +144,7 @@ class TimerViewController: UIViewController {
      let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 216))
      alert.view.addSubview(picker)
     let currentIntervalValue = (type == .Work) ? workIntervalInSeconds : restIntervalCounter
-    let pickerDatasourceDelegate = PickerDatasourceDelegate(picker: picker, currentIntervalValue: currentIntervalValue)
+    let pickerDatasourceDelegate = IntervalPickerDatasourceDelegate(picker: picker, currentIntervalValue: currentIntervalValue)
     pickerDatasourceDelegate.loadData()
     
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (action)  in
