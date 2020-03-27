@@ -38,7 +38,7 @@ class TimerViewController: UIViewController {
   }
   
   //Outlets
-  @IBOutlet weak private var timerLabel: UILabel!
+  @IBOutlet weak private var timerLabel: TimerLabel!
   @IBOutlet weak private var statusLabel: UILabel!
   @IBOutlet weak private var workIntervalLabel: UILabel!
   @IBOutlet weak private var restIntervalLabel: UILabel!
@@ -46,18 +46,17 @@ class TimerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    resetValues()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-//    resetValues()
+    resetValues()
   }
 
   private func resetValues() {
     workIntervalLabel.text = "\(workIntervalInSeconds) seconds"
     restIntervalLabel.text = "\(restIntervalInSeconds) seconds"
-    timerLabel.text = "\(workIntervalInSeconds)"
+    timerLabel.convertSecondsToTimeFormatAndSetText(intervalInSeconds: workIntervalInSeconds)
     statusLabel.text = "Not started"
     isWorkInterval = true
     isStarted = false
@@ -85,7 +84,9 @@ class TimerViewController: UIViewController {
     if seconds < 1 {
       toggleTimer()
     }
-    timerLabel.text = "\(seconds)"
+    timerLabel.convertSecondsToTimeFormatAndSetText(intervalInSeconds: seconds)
+    
+//    timerLabel.text = "\(seconds)"
   }
 
   func toggleTimer() {

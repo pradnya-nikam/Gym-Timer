@@ -16,6 +16,7 @@
 		4C4E413A238126290049A662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4E4139238126290049A662 /* Assets.xcassets */; };
 		4C4E413D238126290049A662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4E413B238126290049A662 /* LaunchScreen.storyboard */; };
 		4C4E4148238126290049A662 /* Gym_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4147238126290049A662 /* Gym_TimerTests.swift */; };
+		4C808114242C4FB200827E54 /* TimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C808113242C4FB200827E54 /* TimerLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4C4E4143238126290049A662 /* Gym TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gym TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4E4147238126290049A662 /* Gym_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym_TimerTests.swift; sourceTree = "<group>"; };
 		4C4E4149238126290049A662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C808113242C4FB200827E54 /* TimerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				4C4E413E238126290049A662 /* Info.plist */,
 				4C359F5A24299D27000A0C41 /* PickerDatasourseDelegate.swift */,
 				4C359F5C2429EFF5000A0C41 /* IntervalType.swift */,
+				4C808113242C4FB200827E54 /* TimerLabel.swift */,
 			);
 			path = "Gym Timer";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				4C359F5B24299D27000A0C41 /* PickerDatasourseDelegate.swift in Sources */,
 				4C4E4131238126270049A662 /* AppDelegate.swift in Sources */,
 				4C4E4133238126270049A662 /* SceneDelegate.swift in Sources */,
+				4C808114242C4FB200827E54 /* TimerLabel.swift in Sources */,
 				4C359F5D2429EFF5000A0C41 /* IntervalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
