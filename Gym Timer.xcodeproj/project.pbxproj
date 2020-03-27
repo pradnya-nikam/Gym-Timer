@@ -85,16 +85,13 @@
 		4C4E412F238126270049A662 /* Gym Timer */ = {
 			isa = PBXGroup;
 			children = (
-				4C4E4130238126270049A662 /* AppDelegate.swift */,
-				4C4E4132238126270049A662 /* SceneDelegate.swift */,
-				4C4E4134238126270049A662 /* TimerViewController.swift */,
-				4C4E4136238126270049A662 /* Main.storyboard */,
+				4C808119242E030400827E54 /* Model */,
+				4C808118242E02DA00827E54 /* Controller */,
+				4C808117242E02B400827E54 /* AppDelegate */,
+				4C808116242E028400827E54 /* View */,
+				4C808115242E026F00827E54 /* Picker */,
 				4C4E4139238126290049A662 /* Assets.xcassets */,
-				4C4E413B238126290049A662 /* LaunchScreen.storyboard */,
 				4C4E413E238126290049A662 /* Info.plist */,
-				4C359F5A24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift */,
-				4C359F5C2429EFF5000A0C41 /* IntervalType.swift */,
-				4C808113242C4FB200827E54 /* TimerLabel.swift */,
 			);
 			path = "Gym Timer";
 			sourceTree = "<group>";
@@ -106,6 +103,49 @@
 				4C4E4149238126290049A662 /* Info.plist */,
 			);
 			path = "Gym TimerTests";
+			sourceTree = "<group>";
+		};
+		4C808115242E026F00827E54 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4C359F5A24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		4C808116242E028400827E54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C4E4132238126270049A662 /* SceneDelegate.swift */,
+				4C4E4136238126270049A662 /* Main.storyboard */,
+				4C4E413B238126290049A662 /* LaunchScreen.storyboard */,
+				4C808113242C4FB200827E54 /* TimerLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C808117242E02B400827E54 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4C4E4130238126270049A662 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4C808118242E02DA00827E54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C4E4134238126270049A662 /* TimerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4C808119242E030400827E54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C359F5C2429EFF5000A0C41 /* IntervalType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
