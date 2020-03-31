@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C359F5B24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C359F5A24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift */; };
 		4C359F5D2429EFF5000A0C41 /* IntervalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C359F5C2429EFF5000A0C41 /* IntervalType.swift */; };
+		4C36259D2432E75800EA60F4 /* NumberPickerDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36259C2432E75800EA60F4 /* NumberPickerDatasourceDelegate.swift */; };
 		4C4E4131238126270049A662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4130238126270049A662 /* AppDelegate.swift */; };
 		4C4E4133238126270049A662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4132238126270049A662 /* SceneDelegate.swift */; };
 		4C4E4135238126270049A662 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E4134238126270049A662 /* TimerViewController.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		4C359F5A24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalPickerDatasourceDelegate.swift; sourceTree = "<group>"; };
 		4C359F5C2429EFF5000A0C41 /* IntervalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalType.swift; sourceTree = "<group>"; };
+		4C36259C2432E75800EA60F4 /* NumberPickerDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPickerDatasourceDelegate.swift; sourceTree = "<group>"; };
 		4C4E412D238126270049A662 /* Gym Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4E4130238126270049A662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4E4132238126270049A662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4C359F5A24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift */,
+				4C36259C2432E75800EA60F4 /* NumberPickerDatasourceDelegate.swift */,
 			);
 			path = Picker;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				4C4E4135238126270049A662 /* TimerViewController.swift in Sources */,
 				4C359F5B24299D27000A0C41 /* IntervalPickerDatasourceDelegate.swift in Sources */,
+				4C36259D2432E75800EA60F4 /* NumberPickerDatasourceDelegate.swift in Sources */,
 				4C4E4131238126270049A662 /* AppDelegate.swift in Sources */,
 				4C4E4133238126270049A662 /* SceneDelegate.swift in Sources */,
 				4C808114242C4FB200827E54 /* TimerLabel.swift in Sources */,

@@ -10,8 +10,8 @@ import UIKit
 import AVFoundation
 
 
-let DEFAULT_WORK_INTERVAL = 45
-let DEFAULT_REST_INTERVAL = 15
+let DEFAULT_WORK_INTERVAL = 6
+let DEFAULT_REST_INTERVAL = 3
 
 class TimerViewController: UIViewController {
 
@@ -138,6 +138,7 @@ class TimerViewController: UIViewController {
     let synthesizer = AVSpeechSynthesizer()
     synthesizer.speak(utterance)
   }
+
   //MARK: Button actions
   @IBAction func startTimerAction(_ sender: Any) {
     if !isStarted {
@@ -155,16 +156,24 @@ class TimerViewController: UIViewController {
   
   //MARK: Change Intervals
   @IBAction func changeRestIntervalAction(_ sender: Any) {
-    openPickerInAlertView(title: "Rest Interval", type: .Rest)
+    openIntervalPickerInAlertView(title: "Rest Interval", type: .Rest)
   }
   
   @IBAction func changeWorkIntervalAction(_ sender: Any) {
-    openPickerInAlertView(title: "Work Interval", type: .Work)
+    openIntervalPickerInAlertView(title: "Work Interval", type: .Work)
   }
   
-  var pickerDatasourceDelegate: IntervalPickerDatasourceDelegate?
+  @IBAction func changeNumberOfWorkoutsAction(_ sender: Any) {
+    openNumberPickerInAlertView(title: "No. of Workouts", onChange: { value in
+      self.noOfWorkouts = value
+      self.resetValues()
+    })
+  }
   
-  func openPickerInAlertView(title: String, type: IntervalType) {
+  
+  //MARK: Interval picker
+  
+  func openIntervalPickerInAlertView(title: String, type: IntervalType) {
     let alert = UIAlertController(title: title, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
     //371x216
      let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 216))
@@ -176,9 +185,8 @@ class TimerViewController: UIViewController {
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (action)  in
       self?.intervalChanged(min: pickerDatasourceDelegate.selectedMinute,
                             sec: pickerDatasourceDelegate.selectedSecond, type: type)
-      self?.pickerDatasourceDelegate = nil
     }))
-    self.pickerDatasourceDelegate = pickerDatasourceDelegate
+
     self.present(alert ,animated: true, completion: nil )
   }
   
@@ -193,5 +201,22 @@ class TimerViewController: UIViewController {
     }
     resetValues()
   }
+  
+  //MARK: no. of workouts/ no. of rounds - picker
+  func openNumberPickerInAlertView(title: String, onChange valueChanged: @escaping (Int)->()) {
+    let alert = UIAlertController(title: title, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
+    //371x216
+    let picker = UIPickerView(frame: CGRect(x: 5, y: 20, width: 250, height: 216))
+    alert.view.addSubview(picker)
+    let pickerDatasourceDelegate = NumberPickerDatasourceDelegate(picker: picker, selectedValue: noOfWorkouts)
+    pickerDatasourceDelegate.initialiseData()
+    
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler:
+      { _  in
+      valueChanged(pickerDatasourceDelegate.selectedValue)
+    }))
+    self.present(alert ,animated: true, completion: nil )
+  }
+
 }
 
