@@ -20,11 +20,13 @@ class TimerViewController: UIViewController {
   //User defined values
   var workIntervalInSeconds = DEFAULT_WORK_INTERVAL
   var restIntervalInSeconds = DEFAULT_REST_INTERVAL
+  var noOfWorkouts = 2
+//  var noOfRounds = 2
   
   //Counters
   var workIntervalCounter = DEFAULT_WORK_INTERVAL
   var restIntervalCounter = DEFAULT_REST_INTERVAL
-
+  var noOfWorkoutsCounter = 0
   //Flags
   
   var isWorkInterval = true
@@ -42,6 +44,8 @@ class TimerViewController: UIViewController {
   @IBOutlet weak private var statusLabel: UILabel!
   @IBOutlet weak private var workIntervalLabel: UILabel!
   @IBOutlet weak private var restIntervalLabel: UILabel!
+  @IBOutlet weak var noOfWorkoutsLabel: UILabel!
+  @IBOutlet weak var noOfRoundsLabel: UILabel!
   @IBOutlet weak var startOrPauseButton: UIButton!
   
   override func viewDidLoad() {
@@ -56,12 +60,19 @@ class TimerViewController: UIViewController {
   private func resetValues() {
     workIntervalLabel.text = "\(workIntervalInSeconds) seconds"
     restIntervalLabel.text = "\(restIntervalInSeconds) seconds"
+    noOfWorkoutsLabel.text = "\(noOfWorkouts)"
+//    noOfRoundsLabel.text = "\(noOfRounds)"
     timerLabel.convertSecondsToTimeFormatAndSetText(intervalInSeconds: workIntervalInSeconds)
     statusLabel.text = "Not started"
+    resetCounters()
+  }
+  
+  private func resetCounters() {
     isWorkInterval = true
     isStarted = false
     workIntervalCounter = workIntervalInSeconds
     restIntervalCounter = restIntervalInSeconds
+    noOfWorkoutsCounter = 0
   }
   
   //MARK: Timer Stuff
@@ -86,15 +97,30 @@ class TimerViewController: UIViewController {
     }
     timerLabel.convertSecondsToTimeFormatAndSetText(intervalInSeconds: seconds)
     
-//    timerLabel.text = "\(seconds)"
   }
 
   func toggleTimer() {
     timer.invalidate()
+    //If work interval has ended, count this workout
+    if isWorkInterval {
+      noOfWorkoutsCounter += 1
+    }
+    if noOfWorkoutsCounter >= noOfWorkouts {
+      notifyWorkoutCompleted()
+      return
+    }
     isWorkInterval = !isWorkInterval
     workIntervalCounter = workIntervalInSeconds + 1
     restIntervalCounter = restIntervalInSeconds + 1
     startTimer()
+    
+  }
+
+  private func notifyWorkoutCompleted() {
+    statusLabel.text = "Workout Completed"
+    isStarted = false
+    speakOut(speech: "Workout Completed")
+    resetCounters()
   }
   
   //MARK: Speech stuff

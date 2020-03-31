@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiK-aE-0I9">
-                                <rect key="frame" x="99" y="454" width="216" height="82"/>
+                                <rect key="frame" x="99" y="454" width="216" height="196"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Work:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-T7-XkJ">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="26"/>
@@ -96,20 +96,52 @@
                                             <action selector="changeWorkIntervalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyG-dE-OMy"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Workouts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJA-Ye-wV4">
+                                        <rect key="frame" x="0.0" y="112" width="152" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIu-Zq-K8L">
+                                        <rect key="frame" x="162" y="112" width="12.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-e6-E3Z">
+                                        <rect key="frame" x="162" y="168" width="13" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Rounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bge-Cq-zRZ">
+                                        <rect key="frame" x="0.0" y="168" width="132" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="KIu-Zq-K8L" firstAttribute="leading" secondItem="DJA-Ye-wV4" secondAttribute="trailing" constant="10" id="0dV-bb-CpD"/>
                                     <constraint firstItem="JSz-8v-3ut" firstAttribute="centerY" secondItem="Q1k-WD-gcF" secondAttribute="centerY" id="1D0-xG-KrI"/>
+                                    <constraint firstItem="nY5-e6-E3Z" firstAttribute="centerY" secondItem="bge-Cq-zRZ" secondAttribute="centerY" id="1PY-dO-Bw8"/>
                                     <constraint firstItem="nlu-aN-fJd" firstAttribute="centerY" secondItem="V47-w0-uqB" secondAttribute="centerY" id="26b-SL-K2d"/>
                                     <constraint firstItem="JSz-8v-3ut" firstAttribute="leading" secondItem="Q1k-WD-gcF" secondAttribute="trailing" constant="12" id="2ef-jk-zZM"/>
+                                    <constraint firstItem="nY5-e6-E3Z" firstAttribute="leading" secondItem="KIu-Zq-K8L" secondAttribute="leading" id="5DT-vF-IYg"/>
+                                    <constraint firstItem="bge-Cq-zRZ" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="leading" id="7rt-Lz-VeM"/>
                                     <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="V47-w0-uqB" secondAttribute="trailing" constant="8" symbolic="YES" id="DPI-QY-oTk"/>
                                     <constraint firstAttribute="trailing" secondItem="JSz-8v-3ut" secondAttribute="trailing" id="Dmq-QR-sby"/>
                                     <constraint firstItem="V47-w0-uqB" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="leading" id="GGe-l1-kcN"/>
                                     <constraint firstItem="Q1k-WD-gcF" firstAttribute="centerY" secondItem="ySC-T7-XkJ" secondAttribute="centerY" id="OQk-J1-6ek"/>
+                                    <constraint firstAttribute="bottom" secondItem="bge-Cq-zRZ" secondAttribute="bottom" constant="2" id="Qp1-Fw-Yf0"/>
+                                    <constraint firstItem="bge-Cq-zRZ" firstAttribute="top" secondItem="DJA-Ye-wV4" secondAttribute="bottom" constant="30" id="UhF-mW-dZc"/>
                                     <constraint firstItem="nlu-aN-fJd" firstAttribute="leading" secondItem="Q1k-WD-gcF" secondAttribute="leading" id="XrS-YT-j2t"/>
                                     <constraint firstItem="ySC-T7-XkJ" firstAttribute="top" secondItem="WiK-aE-0I9" secondAttribute="top" id="YSI-Tz-qdV"/>
-                                    <constraint firstAttribute="bottom" secondItem="V47-w0-uqB" secondAttribute="bottom" id="Z1V-Bw-K9x"/>
                                     <constraint firstItem="V47-w0-uqB" firstAttribute="top" secondItem="ySC-T7-XkJ" secondAttribute="bottom" constant="30" id="iba-bm-WKK"/>
+                                    <constraint firstItem="KIu-Zq-K8L" firstAttribute="centerY" secondItem="DJA-Ye-wV4" secondAttribute="centerY" id="kHd-TA-hfB"/>
+                                    <constraint firstItem="DJA-Ye-wV4" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="leading" id="kK5-Cm-HUb"/>
+                                    <constraint firstItem="DJA-Ye-wV4" firstAttribute="top" secondItem="V47-w0-uqB" secondAttribute="bottom" constant="30" id="pm0-cd-frL"/>
                                     <constraint firstItem="ySC-T7-XkJ" firstAttribute="leading" secondItem="WiK-aE-0I9" secondAttribute="leading" id="rRQ-qD-sju"/>
                                     <constraint firstItem="Q1k-WD-gcF" firstAttribute="leading" secondItem="ySC-T7-XkJ" secondAttribute="trailing" constant="20" id="uRp-SW-5LH"/>
                                 </constraints>
@@ -171,6 +203,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="noOfRoundsLabel" destination="nY5-e6-E3Z" id="KA1-Le-Wdo"/>
+                        <outlet property="noOfWorkoutsLabel" destination="KIu-Zq-K8L" id="on4-zN-7ML"/>
                         <outlet property="restIntervalLabel" destination="nlu-aN-fJd" id="D2W-U7-wk5"/>
                         <outlet property="startOrPauseButton" destination="oiC-vT-4G8" id="qAK-Ui-Cfu"/>
                         <outlet property="statusLabel" destination="LJ3-Tg-nj7" id="a4I-26-xlE"/>
